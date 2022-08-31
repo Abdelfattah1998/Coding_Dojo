@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Profile</h1>
+      <ul>
+        <li><a href="#" class="a">Home</a></li>
+        <li><a href="#" class="a">My Profile</a></li>
+        <li><a href="#" class="a">Find Connections</a></li>
+        <li><button class="btn">Sign Out</button></li>
+      </ul>
+    </header>
+    <div class="main">
+      <div>
+        <section class="container">
+            <div class="top"></div>
+            <div class="side">
+              <img src="icons\user-circle.png" alt="user_photo" class="img-1" />
+              <h1 style="margin-top: -2%" id="name">Jane Doe</h1>
+              <p>
+                <sub
+                  ><img
+                    src="icons\map-marker.png"
+                    alt="location icon"
+                    class="img-2"
+                /></sub>
+                Seatle
+              </p>
+              <p>Developer| Engineer | Problem Solver</p>
+              <p>Master of shadows and the internet</p>
+              <p>
+                <sub><img src="icons\gear.png" alt="gear" class="img-2" /></sub>
+                <a href="#" onclick="editprofile()">edit profile</a>
+              </p>
+            </div>
+        </section>
+        <article class="container">
+          <div class="top3"><h3>Education</h3></div>
+          <div>
+            <h2 class="p">Coding Dojo Full Stack Bootcamp</h2>
+            <p class="p">Dec 2019 - Mar 2020</p>
+            <p class="p">Triple black belt in Python, Mern, C#</p>
+          </div>
+        </article>
+      </div>
+    
+    <aside>
+      <article class="container" id="second">
+        <div class="top3"><button class="button" id="button1">2 </button> <h3>Connection Requests</h3></div>
+        <div id="parent">
+          <div class="user" id="user1"><img src="icons\user-circle.png" alt="connection_photo" class="img-3"><h3>Todd E</h3><img src="icons\accept-circle.png" alt="accept" class="img-3" onclick="accept1()"><img src="icons\close-circle.png" alt="reject" class="img-3"></div>
+          <div class="user" id="user2"><img src="icons\user-circle.png" alt="connection_photo" class="img-3"><h3>Phil K</h3><img src="icons\accept-circle.png" alt="accept" class="img-3" onclick="accept2()"><img src="icons\close-circle.png" alt="reject" class="img-3"></div>
+        </div>
+      </article>
+      <article class="container" id="second">
+        <div class="top3"><button class="button" id="button2">500</button><h3>Your Connections</h3></div>
+        <div>
+          <div class="user"><img src="icons\user-circle.png" alt="connection_photo" class="img-3"><h3>Phil K</h3><img src="icons\accept-circle.png" alt="accept" class="img-3"><img src="icons\close-circle.png" alt="reject" class="img-3"></div>
+          <div class="user"><img src="icons\user-circle.png" alt="connection_photo" class="img-3"><h3>Phil K</h3><img src="icons\accept-circle.png" alt="accept" class="img-3"><img src="icons\close-circle.png" alt="reject" class="img-3"></div>
+          <div class="user"><img src="icons\user-circle.png" alt="connection_photo" class="img-3"><h3>Phil K</h3><img src="icons\accept-circle.png" alt="accept" class="img-3"><img src="icons\close-circle.png" alt="reject" class="img-3"></div>
+          <div class="user"><img src="icons\user-circle.png" alt="connection_photo" class="img-3"><h3>Phil K</h3><img src="icons\accept-circle.png" alt="accept" class="img-3"><img src="icons\close-circle.png" alt="reject" class="img-3"></div>
+          <div class="user"><img src="icons\user-circle.png" alt="connection_photo" class="img-3"><h3>Phil K</h3><img src="icons\accept-circle.png" alt="accept" class="img-3"><img src="icons\close-circle.png" alt="reject" class="img-3"></div>
+          <div style="border-top:2px solid gray ;padding: 10px;;"><a href="#" class="p">View More</a></div>
+        </div>
+      </article>
+    </aside>
+  </div>
+  <script src="profile.js"></script>
+  </body>
+</html>
