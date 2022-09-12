@@ -1,4 +1,4 @@
 sum=0
-for x in range(0, 500000, 1):
+for x in range(1, 500000, 2):
     sum=sum+x
 print(sum)
