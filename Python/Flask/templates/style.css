@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    top: 0;
+}
+.c{
+    display: inline-block;
+    height: 10rem;
+    width: 10rem;
+    background-color: aquamarine;
+}
