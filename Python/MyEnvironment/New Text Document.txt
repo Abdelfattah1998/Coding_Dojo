@@ -1,0 +1,50 @@
+Microsoft Windows [Version 10.0.19044.1889]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Hasanat\Documents\CodingDojo\Python\MyEnvironment>call py3Env\Scripts\activate
+
+(py3Env) C:\Users\Hasanat\Documents\CodingDojo\Python\MyEnvironment>pip list
+Package    Version
+---------- -------
+pip        22.2.2
+setuptools 63.2.0
+
+(py3Env) C:\Users\Hasanat\Documents\CodingDojo\Python\MyEnvironment>pip3 list
+Package    Version
+---------- -------
+pip        22.2.2
+setuptools 63.2.0
+
+(py3Env) C:\Users\Hasanat\Documents\CodingDojo\Python\MyEnvironment>pip install Django==2.2.4
+Collecting Django==2.2.4
+  Downloading Django-2.2.4-py3-none-any.whl (7.5 MB)
+     ---------------------------------------- 7.5/7.5 MB 3.2 MB/s eta 0:00:00
+Collecting sqlparse
+  Downloading sqlparse-0.4.2-py3-none-any.whl (42 kB)
+     ---------------------------------------- 42.3/42.3 kB 2.1 MB/s eta 0:00:00
+Collecting pytz
+  Downloading pytz-2022.2.1-py2.py3-none-any.whl (500 kB)
+     ---------------------------------------- 500.6/500.6 kB 3.5 MB/s eta 0:00:00
+Installing collected packages: pytz, sqlparse, Django
+Successfully installed Django-2.2.4 pytz-2022.2.1 sqlparse-0.4.2
+
+(py3Env) C:\Users\Hasanat\Documents\CodingDojo\Python\MyEnvironment>pip freeze
+Django==2.2.4
+pytz==2022.2.1
+sqlparse==0.4.2
+
+(py3Env) C:\Users\Hasanat\Documents\CodingDojo\Python\MyEnvironment>pip freeze>abed.txt
+
+(py3Env) C:\Users\Hasanat\Documents\CodingDojo\Python\MyEnvironment>pip uninstall Django
+Found existing installation: Django 2.2.4
+Uninstalling Django-2.2.4:
+  Would remove:
+    c:\users\hasanat\documents\codingdojo\python\myenvironment\py3env\lib\site-packages\django-2.2.4.dist-info\*
+    c:\users\hasanat\documents\codingdojo\python\myenvironment\py3env\lib\site-packages\django\*
+    c:\users\hasanat\documents\codingdojo\python\myenvironment\py3env\scripts\django-admin.exe
+    c:\users\hasanat\documents\codingdojo\python\myenvironment\py3env\scripts\django-admin.py
+Proceed (Y/n)? y
+  Successfully uninstalled Django-2.2.4
+
+(py3Env) C:\Users\Hasanat\Documents\CodingDojo\Python\MyEnvironment>pip show Django
+WARNING: Package(s) not found: Django

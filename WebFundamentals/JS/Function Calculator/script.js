@@ -24,7 +24,6 @@ function calculate(){
         buffer=buffer/mem;
     }
     display.innerText=buffer;
-    buffer=0;
 }
 function clr(){
     mem="";

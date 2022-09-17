@@ -1,0 +1,35 @@
+use users;
+
+
+Delete from users where id <1000;
+ALTER TABLE `users` AUTO_INCREMENT = 1; 
+INSERT INTO users (first_name, last_name,email,created_at) 
+VALUES('user1' , 'last1', 'email1', now()),
+('user2' , 'last2', 'email2', now()),
+('user3' , 'last3', 'email3', now());
+select * from users;
+
+select * from users where email='email1';
+
+select * from users where id=3;
+
+UPDATE users SET last_name = 'panckackes' WHERE id=3;
+
+DELETE FROM users WHERE id=2;
+
+SELECT *
+FROM users
+ORDER BY first_name ASC;
+
+SELECT *
+FROM users
+ORDER BY first_name DESC ;
+
+
+
+
+-- SELECT email
+-- FROM users
+-- WHERE id = 1;
+
+

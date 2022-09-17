@@ -1,0 +1,1 @@
+call C:\Users\Hasanat\Documents\CodingDojo\Python\MyEnvironment\py3Env\Scripts\activate

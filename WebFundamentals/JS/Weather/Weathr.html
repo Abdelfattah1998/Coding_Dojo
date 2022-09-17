@@ -1,87 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="Weather.css">
-</head>
-<body>
+    <link rel="stylesheet" href="Weather.css" />
+  </head>
+  <body>
     <header>
-        <h1>Dojo Weather</h1>
-        <ul>
-            <li onclick="city()">Burbank</li>
-            <li onclick="city()">Chicago</li>
-            <li onclick="city()">Dallas</li>
-        </ul>
+      <h1>Dojo Weather</h1>
+      <ul>
+        <li onclick="city()">Burbank</li>
+        <li onclick="city()">Chicago</li>
+        <li onclick="city()">Dallas</li>
+      </ul>
     </header>
     <nav>
-        <h2>
-            SanJose
-        </h2>
-        <div class="temp">
-            <p>Show temperature in</p>
-            <select name="display" id="display" onchange="CF(this)">
-                <option value="C">C</option>
-                <option value="F"> F </option>
-              </select>
-        </div>
+      <h2>SanJose</h2>
+      <div class="temp">
+        <p>Show temperature in</p>
+        <select name="display" id="display" onchange="CF(this)">
+          <option value="C">C</option>
+          <option value="F">F</option>
+        </select>
+      </div>
     </nav>
     <main>
-        <section>
-            <h2>
-                Today
-            </h2>
-            <img src="assets\some_rain.png" alt="rain">
-            <p>some rain</p>
-            <div class="temperature">
-                <p class="max" id="max1">24</p>
-                <p class="min" id="min1">18</p>
-            </div>
-        </section>
-        <section>
-            <h2>
-                Tomorrow
-            </h2>
-            <img src="assets\some_sun.png" alt="sun">
-            <p>some sun</p>
-            <div class="temperature">
-                <p class="max" id="max2">27</p>
-                <p class="min" id="min2">19</p>
-            </div>
-        </section>
-        <section>
-            <h2>
-                Friday
-            </h2>
-            <img src="assets\some_clouds.png" alt="clouds">
-            <p>some clouds</p>
-            <div class="temperature">
-                <p class="max" id="max3">21</p>
-                <p class="min" id="min3">16</p>
-            </div>
-        </section>
-        <section>
-            <h2>
-                Saturday
-            </h2>
-            <img src="assets\some_sun.png" alt="sun">
-            <p>some sun</p>
-            <div class="temperature">
-                <p class="max" id="max4">26</p>
-                <p class="min" id="min4">21</p>
-            </div>
-        </section>
+      <section>
+        <h2>Today</h2>
+        <img src="assets\some_rain.png" alt="rain" />
+        <p>some rain</p>
+        <div class="temperature">
+          <p class="max" id="max1">24</p>
+          <p class="min" id="min1">18</p>
+        </div>
+      </section>
+      <section>
+        <h2>Tomorrow</h2>
+        <img src="assets\some_sun.png" alt="sun" />
+        <p>some sun</p>
+        <div class="temperature">
+          <p class="max" id="max2">27</p>
+          <p class="min" id="min2">19</p>
+        </div>
+      </section>
+      <section>
+        <h2>Friday</h2>
+        <img src="assets\some_clouds.png" alt="clouds" />
+        <p>some clouds</p>
+        <div class="temperature">
+          <p class="max" id="max3">21</p>
+          <p class="min" id="min3">16</p>
+        </div>
+      </section>
+      <section>
+        <h2>Saturday</h2>
+        <img src="assets\some_sun.png" alt="sun" />
+        <p>some sun</p>
+        <div class="temperature">
+          <p class="max" id="max4">26</p>
+          <p class="min" id="min4">21</p>
+        </div>
+      </section>
     </main>
     <footer>
-        <img src="assets\cookie.png" alt="cookie" id="img">
-        <div>
-            <h2>Stop!Cookie time</h2>
-            <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a>Read more...</a></p>
-        </div>
-        <button onclick="accepted()">I accept</button>
+      <img src="assets\cookie.png" alt="cookie" id="img" />
+      <div>
+        <h2>Stop!Cookie time</h2>
+        <p>
+          We use cookies (sadly not the edible ones) to personalize content and
+          ads, to provide social media features and to analyses our traffic.
+          <a>Read more...</a>
+        </p>
+      </div>
+      <button onclick="accepted()">I accept</button>
     </footer>
     <script src="weather.js"></script>
-</body>
+  </body>
 </html>
