@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+}
+.row{
+    width: inherit;
+    display: block;
+}
+div{
+    height: 10rem;
+    width:  10rem;
+    display: inline-block;
+}
+.even{
+    background-color: bisque;
+}
+.odd{
+    background-color: aqua;
+}
