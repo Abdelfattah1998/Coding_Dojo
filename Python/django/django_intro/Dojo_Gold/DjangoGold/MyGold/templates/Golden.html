@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 80%;
+        margin: 0 auto;
+      }
+      header {
+        width: inherit;
+        height: 5%;
+        margin: 1rem;
+      }
+      .YourGold {
+        display: inline;
+      }
+      #balance {
+        width: 10%;
+        border: 0.1rem solid black;
+        display: inline-block;
+      }
+      main {
+        height: 17rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+      form {
+        width: 20%;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .activities {
+        background-color: gainsboro;
+        height: 11rem;
+        overflow: auto;
+        padding: 0.5rem 1rem;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h2 class="YourGold">Your Gold:</h2>
+      <h3 class="YourGold" id="balance">{{ request.session.Gold}}</h3>
+    </header>
+    <main>
+      <form action="/submit" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="EarnLose" value="Farm" />
+        <h2>Farm</h2>
+        <h3>(Earn 10-20 Golds)</h3>
+        <button type="submit">FindGold</button>
+      </form>
+      <form action="/submit" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="EarnLose" value="Cave" />
+        <h2>Cave</h2>
+        <h3>(Earn 10-20 Golds)</h3>
+        <button type="submit">FindGold</button>
+      </form>
+      <form action="/submit" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="EarnLose" value="House" />
+        <h2>House</h2>
+        <h3>(Earn 10-20 Golds)</h3>
+        <button type="submit">FindGold</button>
+      </form>
+      <form action="/submit" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="EarnLose" value="Quest" />
+        <h2>Quest</h2>
+        <h3>(Earns/Takes 0-50 Golds)</h3>
+        <button type="submit">FindGold</button>
+      </form>
+    </main>
+    <div><h2>Activities:</h2></div>
+    <section class="activities">
+      {%for i in request.session.log%}
+      <p >{{i}}</p>
+      {%endfor%}
+    </section>
+  </body>
+</html>

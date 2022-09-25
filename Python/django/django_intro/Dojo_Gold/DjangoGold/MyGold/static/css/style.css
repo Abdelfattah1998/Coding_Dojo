@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+div{
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Right{
+    background-color: green;
+}
+
+.TooHigh{
+    background-color: red;
+}
+
+.TooLow{
+    background-color: blue;
+}
+.start{
+    background-color: palevioletred;
+}
+
+
