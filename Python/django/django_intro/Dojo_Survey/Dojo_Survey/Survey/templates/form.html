@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+
+    <title>Dojo_Survey_django</title>
+  </head>
+  <body>
+    <form action="/result" method="post">
+        {% csrf_token %}
+      <div>
+        <h2>Your Name</h2>
+        <input type="text" name="text"/>
+      </div>
+
+      <div>
+        <h2>Dojo Location</h2>
+        <select name="location">
+          <option>Hebron</option>
+          <option>Jenin</option>
+        </select>
+      </div>
+
+      <div>
+        <h2>Favorite Language</h2>
+        <select name="language">
+          <option>C++</option>
+          <option>C</option>
+          <option>Python</option>
+          <option>Java</option>
+        </select>
+      </div>
+      <h2>Comment(optional)</h2>
+
+      <textarea name="comment" cols="110" rows="10"></textarea>
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+  </body>
+</html>
