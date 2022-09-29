@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{thisbook.title}}</h1>
+    <h2>{{thisbook.id}}</h2>
+    <p>Description:{{thisbook.description}}</p>
+    <h3>Authors</h3>
+    <ul>
+        {%for author in thisbook.Publishers.all%}
+        <li>{{author.first_name}} {{author.last_name}}</li>
+        {%endfor%}
+    </ul>
+
+    <form action="/linkauthor" method="post">{% csrf_token %}
+        <input type="hidden" name="thisbook" value="{{thisbook.id}}">
+        <select name="author" id="author">
+            {%for publisher in publishers%}
+            {%if publisher not in thisbook.Publishers.all%}
+            <option value="{{publisher.id}}">{{publisher.first_name}}</option>
+            {%endif%}
+            {%endfor%}
+        </select>
+        <input type="submit" value="add">
+    </form>
+</body>
+</html>

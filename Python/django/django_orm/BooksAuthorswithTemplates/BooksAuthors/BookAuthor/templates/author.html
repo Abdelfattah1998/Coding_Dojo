@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{thisauthor.firstname}} {{thisauthor.lastname}}</h1>
+    <h2>ID: {{thisauthor.id}}</h2>
+    <p>Notes:{{thisauthor.notes}}</p>
+    <h3>Books</h3>
+    <ul>
+        {%for book in thisauthor.books.all%}
+        <li>{{book.title}}</li>
+        {%endfor%}
+    </ul>
+
+    <form action="/linkbook" method="post">{% csrf_token %}
+        <input type="hidden" name="thisauthor" value="{{thisauthor.id}}">
+        <select name="book" id="book">
+            {%for book in books%}
+            {%if book not in thisauthor.books.all%}
+            <option value="{{book.id}}">{{book.title}}</option>
+            {%endif%}
+            {%endfor%}
+        </select>
+        <input type="submit" value="add">
+    </form>
+</body>
+</html>
