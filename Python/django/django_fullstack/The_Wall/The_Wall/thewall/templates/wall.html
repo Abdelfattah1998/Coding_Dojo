@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      body{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      header{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: -webkit-fill-available;
+          margin: 0 5%;
+      }
+      form{
+          display: flex;
+          flex-direction: column;
+      }
+      span{
+          display: flex;
+      }
+      .message{
+        margin: 1rem 0;
+      }
+      .comment{
+        display: flex;
+        flex-direction: column;
+      }
+      main{
+          margin 0 auto;
+          width: 80%;
+      }
+      p{
+        width: inherit;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <header
+      style="display: flex; flex-direction: row; justify-content: space-between"
+    >
+      <h1>Dojo Wall</h1>
+      <span>
+        <h2>Welcome, {{fname}}</h2>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <h2><a href="/logout">Logout</a></h2>
+      </span>
+    </header>
+    <main>
+      <section>
+        <h3>Post a message</h3>
+        <form action="message" method="post">{%csrf_token%}
+          <textarea name="mymessage" id="textarea" cols="inherit" rows="5" ></textarea>
+          <button type="submit">Post a message</button>
+        </form>
+      </section>
+      <article>
+        {%for message in messages%}
+        <div class="message">
+            <h3>{{message.User.fname}} {{message.User.lname}} {{message.created_at}}</h3>
+            <p>{{message.Text}}</p>
+            {%for comment in message.comments.all %}
+            <div class="comment">
+              <h4>{{comment.User.fname}} {{comment.User.lname}}</h4> 
+              <div>
+                  <p>{{comment.Text}}</p>
+                  {%if userid == comment.User.id%}
+                  <form action="delete" method="post">
+                        <button type="submit">Delete Comment</button>
+                  </form>
+                  {%endif%}
+              </div>
+            </div>
+            {%endfor%}
+            <h5>Post a comment</h5>
+            <form action="comment/{{message.id}}" method="post">
+              {%csrf_token%}
+              <textarea name="mycomment" id="textarea" cols="inherit" rows="1"></textarea>
+              <button type="submit">Post a comment</button>
+            </form>
+        </div>
+        {%endfor%}
+      </article>
+    </main>
+  </body>
+</html>
