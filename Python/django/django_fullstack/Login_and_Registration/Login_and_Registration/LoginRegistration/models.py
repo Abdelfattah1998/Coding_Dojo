@@ -1,7 +1,6 @@
 from django.db import models
 import re
 
-
 class userManager(models.Manager):
     def basic_validator(self, postData):
         errors = {}
@@ -22,7 +21,9 @@ class userManager(models.Manager):
             errors["desc"] = "password should be at least 8 characters"
 
         if postData['password']!=postData['cpassword']:
-            errors["password"] = "Password and its confirmation does not match"            
+            errors["password"] = "Password and its confirmation does not match"   
+
+        
 
 
         return errors
@@ -35,3 +36,4 @@ class user(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = userManager()
+
