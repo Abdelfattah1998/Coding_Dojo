@@ -1,0 +1,3 @@
+C:/Users/Hasanat/Documents/CodingDojo/Python/django/djangoPy3Env/Scripts/activate
+
+C:\Users\Hasanat\Documents\CodingDojo\Python\django\djangoPy3Env\Scripts\activate

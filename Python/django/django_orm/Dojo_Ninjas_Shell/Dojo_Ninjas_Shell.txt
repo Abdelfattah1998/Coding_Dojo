@@ -1,0 +1,37 @@
+dojo.objects.create(first_name="first_name",last_name="last_name")
+dojo.objects.create(first_name="first_name",last_name="last_name")
+dojo.objects.create(first_name="first_name",last_name="last_name")
+to_delete=dojo.objects.all()
+to_delete.delete()
+dojo.objects.create(first_name="first_name",last_name="last_name")
+dojo.objects.create(first_name="first_name",last_name="last_name")
+dojo.objects.create(first_name="first_name",last_name="last_name")
+dojo1=dojo.objects.get(id=8)
+ninja.objects.create(name="name",city="city",state="state",dojo=dojo1)
+ninja.objects.create(name="name",city="city",state="state",dojo=dojo1)
+ninja.objects.create(name="name",city="city",state="state",dojo=dojo1)
+dojo2=dojo.objects.get(id=9)
+ninja.objects.create(name="name",city="city",state="state",dojo=dojo2)
+ninja.objects.create(name="name",city="city",state="state",dojo=dojo2)
+ninja.objects.create(name="name",city="city",state="state",dojo=dojo2)
+
+ninja.objects.create(name="name",city="city",state="state",dojo=dojo.objects.get(id=9))
+ninja.objects.create(name="name",city="city",state="state",dojo=dojo.objects.get(id=9))
+ninja.objects.create(name="name",city="city",state="state",dojo=dojo.objects.get(id=9))
+
+>>> ninjas=ninja.objects.filter(dojo=dojo.objects.get(id=9))
+>>> ninjas
+
+ninja.objects.last().dojo
+
+desc=models.TextField(max_length=255)
+
+python manage.py makemigrations
+Select an option: 1
+>>> "old dojo"
+
+python manage.py migrate
+
+Dojo.objects.create(name="name",city="city",state="state",desc="desc")
+
+

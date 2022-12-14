@@ -15,7 +15,7 @@ def login(request):
         User=user.objects.get(email = email)
         if User.password == password:
             request.session['fname']=User.fname
-            request.session['reglog']=False
+            request.session['reglog']=False #False indicates login while True indicates Register
             request.session['userid']=User.id
             return redirect("/success")
         else:
@@ -41,7 +41,6 @@ def register(request):
 
     firstname=request.POST['firstname']
     lastname=request.POST['lastname']
-
     password=request.POST['password']  
     request.session['fname']= firstname
     request.session['reglog']= True
@@ -49,10 +48,10 @@ def register(request):
     request.session['userid']= thisuser.id
 
     return redirect("/success")
-    # return render(request,"LoginRegistration.html")
+
 
 def success(request):
-    if request.session['fname']:
+    if 'fname' in request.session:
         context = {
             "fname":request.session['fname'],
             "reglog":request.session['reglog']

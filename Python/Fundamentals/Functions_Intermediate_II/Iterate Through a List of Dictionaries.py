@@ -1,9 +1,7 @@
 def iterateDictionary(mylist):
     for x in mylist:
         for key, value in x.items():
-         n=key+'-'+value
-       
-         print(n)
+         print(key+'-'+value)
         
 students = [
          {'first_name':  'Michael', 'last_name' : 'Jordan'},

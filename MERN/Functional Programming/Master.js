@@ -1,4 +1,4 @@
-const pokémon = Object.freeze([
+const pokémon = Object([
         { "id": 1,   "name": "Bulbasaur",  "types": ["poison", "grass"] },
         { "id": 5,   "name": "Charmeleon", "types": ["fire"] },
         { "id": 9,   "name": "Blastoise",  "types": ["water"] },
@@ -32,10 +32,28 @@ const pokémon = Object.freeze([
     const poisonListPkmn = pokémon.filter( p => p.types=="poison");
     const ndflyingListPkmn = pokémon.filter( p => p.types[1]=="flying");
     const hybredListPkmn = pokémon.filter( p => p.types.length>1);
-    console.log(oddListPkmn.map(name=>name.name));
-    console.log(fireListPkmn.map(name=>name.name));
-    console.log(pokémon.map(name=>name.name));
-    console.log(greaterListPkmn.map(name=>name.name));
-    console.log(poisonListPkmn.map(name=>name.name));
-    console.log(ndflyingListPkmn.map(name=>name.name));
-    console.log(normalListPkmn.length);
+    const fitypes = pokémon.map(x=>x.types).flat().filter(x=>x.startsWith("fi"));
+    const fitypes5 = pokémon.filter(p=> true)
+    console.log(pokémon.sort((a,b)=>{
+        nameA=a.types[0];
+        nameB=b.types[0];
+    //     if (nameA < nameB) {
+    //     return -1;
+    //   }
+      if (nameA > nameB) {
+        return 1;
+      }
+    
+      // names must be equal
+      return 0;}));
+    // console.log(oddListPkmn.map(name=>name.name));
+    // console.log(fireListPkmn.map(name=>name.name));
+    // console.log(pokémon.map(name=>name.name));
+    // console.log(greaterListPkmn.map(name=>name.name));
+    // console.log(poisonListPkmn.map(name=>name.name));
+    // console.log(ndflyingListPkmn.map(name=>name.name));
+    // console.log(normalListPkmn.length);
+    
+    const zaki =[...pokémon];
+    console.log(zaki);
+    

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* body{
+            display: flex;
+        } */
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+        main{
+            display: flex;
+        }
+        main > div{
+            width: 40%;
+        }
+    </style>
+    <title>Books Main Page</title>
+</head>
+<body>
+    <header>
+        <div ><h1>Welcome,{{Thisuser.fname}}!</h1></div>
+        <div><a href="/logout">Logout</a></div>
+    </header>
+    <hr>
+    <main>
+        <div>
+            <h2>Add a Favourit Book</h2>
+            <div>
+                <form action="/addbook">
+                    <div><h3>Title</h3></div>
+                    <div><h3>Description</h3></div>
+                </form>
+            </div>
+        </div>
+        <div></div>
+    </main>
+</body>
+</html>
