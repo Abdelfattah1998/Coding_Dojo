@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 
-// const Box = ({ color }) => (
-
-//   );
+const Box = ({ color }) => (
+  <div 
+  style={{
+    backgroundColor: color,
+    width: "100px",
+    height: "100px",
+    display: "inline-block",
+    margin: "0.5em"
+  }}
+/>
+  );
 
 const Boxer = (props) => {
   return (
     <div>
       <div>
         {props.color.map(x => (
-    <div key={x}
-    style={{
-      backgroundColor: x,
-      width: "100px",
-      height: "100px",
-      display: "inline-block",
-      margin: "0.5em"
-    }}
-  />
+          <Box key={x}  color={x}></Box>
         ))}
       </div>
     </div>

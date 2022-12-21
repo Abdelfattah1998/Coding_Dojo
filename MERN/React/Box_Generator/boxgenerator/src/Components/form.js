@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 
 const BoxAdder = (props) => {
-  const [color, setColor] = useState("");
+  const [color, setColor] = useState("red");
 
   const handleChange = event => {
     setColor(event.target.value);
@@ -11,7 +11,6 @@ const BoxAdder = (props) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
     props.setBoxes(props.boxes.concat(color));
   };
 
