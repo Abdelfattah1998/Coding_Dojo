@@ -2,20 +2,24 @@ import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
 
-const Form = () => {
+const Form = (props) => {
     const [title, setTitle] = useState(""); 
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
     const submit=e=>{
         e.preventDefault();
-
-        
-        axios.post('http://localhost:8000/api/products', {
+        axios.post('http://localhost:8000/api/product', {
             title,
             price,
             description
         })
-            .then(res=>console.log(res))
+            .then(res=>{console.log(res);
+                props.setProducts(props.products.concat({
+                    title,
+                    price,
+                    description
+                }))
+            })
             .catch(err=>console.log(err))
     }
   return (
